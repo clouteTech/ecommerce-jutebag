@@ -20,6 +20,7 @@ const Product = () => {
               name={spice.name}
               price={spice.price}
               variants={spice.variants}
+              gst={spice.gst}
               onAdd={() => addToCart(spice)}
             />
           </div>

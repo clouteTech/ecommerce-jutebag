@@ -11,6 +11,7 @@ import { ToastContainer, Slide } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import Profile from './Pages/Profile';
 import OrderSummary from './Components/OrderSummary';
+import Invoice from './Components/invoice';
 import PaymentProcessing from './Components/PaymentProcessing';
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/profile" element={<Profile />} />
         <Route path="/order-summary" element={<OrderSummary/>}/>
         <Route path="/payment" element={<PaymentProcessing/>}/>
+        <Route path="/invoice" element={<Invoice/>}/>
         <Route path="/product/:id" element={<ProductDetail/>}/>
       </Routes>
       <ToastContainer position="top-center" autoclose={3000} transition={Slide}/>

@@ -6,13 +6,8 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
 import Inventory2OutlinedIcon from "@mui/icons-material/Inventory2Outlined";
 import PermContactCalendarOutlinedIcon from "@mui/icons-material/PermContactCalendarOutlined";
-import HomeSharpIcon from "@mui/icons-material/HomeSharp";
-import ImageSearchIcon from "@mui/icons-material/ImageSearch";
-import { CartContext } from "../Context/CartContext";
-import Profile from "../Pages/Profile"
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(true);

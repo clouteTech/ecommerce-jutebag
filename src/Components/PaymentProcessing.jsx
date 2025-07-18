@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import html2canvas from "html2canvas";
-import jsPDF from "jspdf";
 import { toast } from "react-toastify";
+import Spices from "../Data/Spices";
 import "../App.css";
 
 const PaymentProcessing = () => {
@@ -15,34 +14,31 @@ const PaymentProcessing = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      generatePDF();
+      setIsProcessing(false);
+      toast.success("Payment Successful!");
     }, 3000); 
 
     return () => clearTimeout(timer);
   }, []);
 
-  const generatePDF = () => {
-    setTimeout(()=>{
-    const invoiceDiv = document.getElementById("invoice");
+  const handleClick =()=> {
+    const orderedItemsWithGST =orderedItems.map(item=>{
+      const spice = Spices.find(s => s.id === item.id);
+      return{
+      ...item,
+      gst:spice?.gst || 0,
+    }})
 
-    html2canvas(invoiceDiv, { scale: 2 }).then((canvas) => {
-      const imgData = canvas.toDataURL("image/png");
-      const pdf = new jsPDF("p", "mm", "a4");
-
-      const imgProps = pdf.getImageProperties(imgData);
-      const pdfWidth = pdf.internal.pageSize.getWidth();
-      const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-
-      pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
-      pdf.save("invoice.pdf");
-
-      toast.success("Payment Successful!");
-      toast.success("Invoice Downloaded!");
-
-      setIsProcessing(false);
+    navigate("/invoice", {
+      state: {
+        profile,
+        orderedItems:orderedItemsWithGST,
+        shippingAddress,
+        subtotal,
+      },
     });
-    },1000);
-  };
+  }
+
 
   return (
     <div className="container py-5 text-center">
@@ -65,13 +61,13 @@ const PaymentProcessing = () => {
             style={{ border: "none" }}
             title="Payment Animation"
           ></iframe>
-
-          <button type="invoice" className="btn btn-primary"  >Invoice</button>
+          <button type="invoice" className="btn btn-primary" onClick={handleClick} >Invoice</button>
         </>
+        
       )}
 
       {/* Hidden invoice for PDF */}
-      <div
+      {/*<div
         id="invoice"
         style={{
           position: "absolute",
@@ -106,7 +102,7 @@ const PaymentProcessing = () => {
           ))}
         </ul>
         <h5>Total: ₹{subtotal?.toFixed(2)}</h5>
-      </div>
+      </div>*/}
     </div>
   );
 };

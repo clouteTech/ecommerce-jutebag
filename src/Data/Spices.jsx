@@ -30,6 +30,7 @@ const Spices = [
       { id: 2, size: 250 },
       { id: 3, size: 500 },
     ],
+    gst: 5,
     rating: 4.5,
     description:
       "Cinnamon is a warm, sweet spice made from the inner bark of trees. It’s used in both sweet and savory dishes for its distinctive flavor and aroma.",
@@ -39,6 +40,7 @@ const Spices = [
     img: Bayleaves,
     name: "Bayleaves",
     price: 0.8,
+    gst: 8,
     variants: [
       { id: 1, size: 100 },
       { id: 2, size: 250 },
@@ -53,6 +55,7 @@ const Spices = [
     img: BlackPepper,
     name: "BlackPepper",
     price: 20,
+    gst: 7,
     variants: [
       { id: 1, size: 100 },
       { id: 2, size: 250 },
@@ -67,6 +70,7 @@ const Spices = [
     img: Cloves,
     name: "Cloves",
     price: 12,
+    gst: 6,
     variants: [
       { id: 1, size: 100 },
       { id: 2, size: 250 },
@@ -81,6 +85,7 @@ const Spices = [
     img: Coriander,
     name: "Coriander",
     price: 10,
+    gst: 7.5,
     variants: [
       { id: 1, size: 100 },
       { id: 2, size: 250 },
@@ -95,6 +100,7 @@ const Spices = [
     img: Cumin,
     name: "Cumin",
     price: 11,
+    gst: 5,
     variants: [
       { id: 1, size: 100 },
       { id: 2, size: 250 },
@@ -109,6 +115,7 @@ const Spices = [
     img: Fenugreek,
     name: "Fenugreek",
     price: 9,
+    gst: 8,
     variants: [
       { id: 1, size: 100 },
       { id: 2, size: 250 },
@@ -123,6 +130,7 @@ const Spices = [
     img: MustardSeeds,
     name: "MustardSeeds",
     price: 7,
+    gst: 5,
     variants: [
       { id: 1, size: 100 },
       { id: 2, size: 250 },
@@ -137,6 +145,7 @@ const Spices = [
     img: Nutmeg,
     name: "Nutmeg",
     price: 15,
+    gst: 7,
     variants: [
       { id: 1, size: 100 },
       { id: 2, size: 250 },
@@ -151,6 +160,7 @@ const Spices = [
     img: Saffron,
     name: "Saffron",
     price: 25,
+    gst: 5,
     variants: [
       { id: 1, size: 100 },
       { id: 2, size: 250 },
@@ -165,6 +175,7 @@ const Spices = [
     img: Turmeric,
     name: "Turmeric",
     price: 10,
+    gst: 6,
     variants: [
       { id: 1, size: 100 },
       { id: 2, size: 250 },
@@ -179,6 +190,7 @@ const Spices = [
     img: CinnamonPowder,
     name: "CinnamonPowder",
     price: 12,
+    gst: 7,
     variants: [
       { id: 1, size: 100 },
       { id: 2, size: 250 },
@@ -193,6 +205,7 @@ const Spices = [
     img: CorianderPowder,
     name: "CorianderPowder",
     price: 15,
+    gst: 5,
     variants: [
       { id: 1, size: 100 },
       { id: 2, size: 250 },
@@ -207,6 +220,7 @@ const Spices = [
     img: CuminPowder,
     name: "CuminPowder",
     price: 18,
+    gst: 5,
     variants: [
       { id: 1, size: 100 },
       { id: 2, size: 250 },
@@ -221,6 +235,7 @@ const Spices = [
     img: GaramMasala,
     name: "GaramMasala",
     price: 10,
+    gst: 5,
     variants: [
       { id: 1, size: 100 },
       { id: 2, size: 250 },
@@ -235,6 +250,7 @@ const Spices = [
     img: RedChilliPowder,
     name: "RedChilliPowder",
     price: 12,
+    gst: 5,
     variants: [
       { id: 1, size: 100 },
       { id: 2, size: 250 },
@@ -249,6 +265,7 @@ const Spices = [
     img: SambarMasala,
     name: "SambarMasala",
     price: 13,
+    gst: 5,
     variants: [
       { id: 1, size: 100 },
       { id: 2, size: 250 },
@@ -263,6 +280,7 @@ const Spices = [
     img: TurmericPowder,
     name: "TurmericPowder",
     price: 12,
+    gst: 5,
     variants: [
       { id: 1, size: 100 },
       { id: 2, size: 250 },
@@ -277,6 +295,7 @@ const Spices = [
     img: ChaatMasala,
     name: "ChaatMasala",
     price: 16,
+    gst: 5,
     variants: [
       { id: 1, size: 100 },
       { id: 2, size: 250 },

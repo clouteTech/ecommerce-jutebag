@@ -14,6 +14,7 @@ const OrderSummary = () => {
       toast.error("Please Enter Shipping Address");
       return;
     }
+    
     navigate("/payment", {
       state: {
         profile,
