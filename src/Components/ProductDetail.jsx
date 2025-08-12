@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import Spices from "../Data/Spices";
 import { CartContext } from "../Context/CartContext";
 import { toast } from "react-toastify";
+import Jutebag from "../Data/Jutebag";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -10,7 +11,7 @@ const ProductDetail = () => {
   const { addToCart } = useContext(CartContext);
   const [selectedSize, setSelectedSize] = useState(100);
 
-  const product = Spices.find((item) => item.id === parseInt(id));
+  const product = Jutebag.find((item) => item.id === parseInt(id));
 
   const totalPrice = (product.price * selectedSize).toFixed(2);
 

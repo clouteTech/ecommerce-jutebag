@@ -1,5 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
+import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 const Footer = () => {
   return (
@@ -7,8 +11,8 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-4 mb-3">
-            <h5>Spice Store</h5>
-            <p>Unlock the Aroma of Authentic Spices.</p>
+            <h5>Jute World</h5>
+            <p>Fashion that Loves the Earth</p>
           </div>
           <div className="col-md-4 mb-3">
             <h5>Explore</h5>
@@ -38,16 +42,20 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-md-4 mb-3">
-            <h5>Contact Us</h5>
-            <p>Email: xxx@xxx.com</p>
-            <p>Phone: 9585574201</p>
+          <div className="col-md-4 mb-4">
+            <h5>Connect With Us</h5>
+            <div className="icon-group">
+              <InstagramIcon />
+              <FacebookOutlinedIcon />
+              <MailOutlinedIcon />
+              <WhatsAppIcon />
+            </div>
           </div>
         </div>
 
         <div className="text-center mt-4">
           <small>
-            © {new Date().getFullYear()} Spice Store. All rights reserved.
+            © {new Date().getFullYear()} Jute Store. All rights reserved.
           </small>
         </div>
       </div>

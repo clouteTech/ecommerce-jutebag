@@ -8,10 +8,16 @@ import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Inventory2OutlinedIcon from "@mui/icons-material/Inventory2Outlined";
 import PermContactCalendarOutlinedIcon from "@mui/icons-material/PermContactCalendarOutlined";
+import {Badge} from "@mui/material";
+import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+import { useCart } from "../Context/CartContext";
+import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(true);
   const [search, setSearch] = useState("");
+  const { cartItems } = useCart();
+
   useEffect(() => {
     document.body.className = darkMode
       ? "bg-dark text-white"
@@ -67,9 +73,8 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="d-flex align-items-center">
-          <form className="d-flex ms-3" role="search"> 
+          <form className="d-flex ms-3" role="search">
             <input
-
               className="form-control me-2"
               type="search"
               placeholder="Search"
@@ -90,6 +95,15 @@ const Navbar = () => {
             )}
           </button>
         </div>
+        <Link to="/cart">
+          <Badge
+            badgeContent={cartItems.length}
+            color="error"
+            overlap="circular"
+          >
+            <LocalMallOutlinedIcon sx={{color:"white"}} fontSize="large" />
+          </Badge>
+        </Link>
         <div className="dropdown ms-3">
           <button
             className={`btn ${

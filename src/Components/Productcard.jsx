@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Spices from "../Data/Spices";
+import Jutebag from "../Data/Jutebag";
 
 const Productcard = ({ id, img, name, price, onAdd }) => {
   const navigate = useNavigate();
 
-  const spice = Spices.find((spice) => spice.id === id);
+  const spice = Jutebag.find((spice) => spice.id === id);
 
   const handleAddtoCart = (e) => {
     e.stopPropagation();
@@ -33,7 +34,7 @@ const Productcard = ({ id, img, name, price, onAdd }) => {
         <h5 className="card-title">{name}</h5>
         <p className="card-text flex-grow-1">
           ₹{price}
-          <span className="small text-muted">/gm</span>
+          <span className="small text-muted"></span>
         </p>
         <button onClick={handleAddtoCart} className="btn btn-warning ms-auto">
           Add to Cart

@@ -1,5 +1,6 @@
 import Productcard from "../Components/Productcard";
 import Spices from "../Data/Spices";
+import Jutebag from "../Data/Jutebag";
 import { CartContext } from "../Context/CartContext";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
@@ -10,9 +11,9 @@ const Product = () => {
 
   return (
     <div className="container py-5">
-      <h2 className="mb-4">Our Spices</h2>
+      <h2 className="mb-4">Our Products</h2>
       <div className="row g-4">
-        {Spices.map((spice) => (
+        {Jutebag.map((spice) => (
           <div className="col-sm-6 col-md-4 col-lg-3" key={spice.id}>
             <Productcard
               id={spice.id}

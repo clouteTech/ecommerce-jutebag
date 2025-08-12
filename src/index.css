@@ -43,3 +43,7 @@
   color: #2c2c2c;
 }
 
+.icon-group{
+  display: flex;
+  gap: 10px;
+}

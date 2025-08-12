@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { useState } from "react";
 import { toast } from "react-toastify";
 
 const Contact = () => {
@@ -30,14 +30,14 @@ const Contact = () => {
 
   return (
     <div
-      className="container py-5"
+      className="container"
     >
       <div
         className="form-group mb-2"
       >
         <h2>Contact Us</h2>
         <p> Need help? Contact our support team anytime.</p>
-        <form onSubmit={handleSubmit} className="row g-3">
+        <form onSubmit={handleSubmit} className="row g-2">
           <div>
             <label htmlFor="name" style={{ width: "100px" }}>
               Name

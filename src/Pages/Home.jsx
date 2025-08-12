@@ -1,5 +1,9 @@
 import React from "react";
 import Spices from "../assets/Spices2.jpg";
+import Backjute from "../assets/Backjute.png";
+import jutebag12 from "../assets/Jute bag12.jpg";
+import HomeJute3 from "../assets/HomeJute3.jpeg";
+import HomeJute4 from "../assets/HomeJute4.jpeg";
 import Kerala from "../assets/Kerala.jpg";
 import Scenes from "../assets/Scenes.jpg";
 import Scene from "../assets/Scene4.jpeg";
@@ -11,7 +15,7 @@ const Home = () => {
       <div
         className="text-overlay d-flex align-items-center justify-content-center"
         style={{
-          background: `url(${Spices})`,
+          background: `url(${Backjute})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "50vh",
@@ -29,15 +33,15 @@ const Home = () => {
             borderRadius: "10px",
           }}
         >
-          <h1>Welcome to Spice World</h1>
-          <p>Discover the finest handpicked Spices from Organic Farms</p>
+          <h1>Welcome to Earth's Choice</h1>
+          <p>Eco-Friendly Bags for a Better Tomorrow</p>
           <button className="btn btn-warning">Shop Now</button>
         </div>
       </div>
       <div className="scroll-banner">
         <div className="scroll-text">
-          🌿 100% Organic Spices • 🌶️ Handpicked From Indian Farms • 🍛
-          Freshness Guaranteed • 🛒 Shop Now & Taste the Tradition •
+          👜 Elegant & Durable • 🌿 Biodegradable Jute Bags • ♻️ Plastic-Free
+          Lifestyle • 🌏 Better for You, Better for Earth • 🛒 Shop Eco Today
         </div>
       </div>
       <div className="container-sm">
@@ -50,48 +54,52 @@ const Home = () => {
           </h2>
         </div>
         <p className="text-center mx-3">
-          Our spices are sourced directly from the lush farms of Kerala, the
-          aromatic lands of Tamil Nadu, and the vibrant markets of Rajasthan.
-          Each spice tells a story of ancient traditions, organic farming, and
-          rich cultural heritage. We work closely with farmers who handpick and
-          sun-dry the spices to retain their natural oils and powerful flavors.
+          Our jute bags are crafted from the golden fibers of Bengal, the
+          artisan hubs of Tamil Nadu, and the skilled weaving communities of
+          Assam. Each bag carries a story of eco-conscious living, ethical
+          craftsmanship, and timeless tradition. We partner directly with local
+          artisans who hand-weave and stitch every bag, ensuring durability,
+          natural elegance, and a minimal carbon footprint so you can carry
+          style with sustainability.
         </p>
         <div className="row justify-content-center">
-          <div className="col-md mb-3">
+          <div className="col-md mb-2">
             <img
-              src={Scene}
+              src={HomeJute3}
               alt="Scene3"
-              className="img-fluid-rounded"
-              style={{ maxWidth: "300px" }}
+              className="equal-img rounded"
+              style={{ maxWidth: "600px" }}
             />
           </div>
-          <div className="col-md mb-3">
+          <div className="col-md mb-2">
             <img
-              src={Kerala}
+              src={HomeJute4}
               alt="Kerala"
-              className="img-fluid-rounded"
-              style={{ maxWidth: "300px" }}
+              className="equal-img rounded"
+              style={{ maxWidth: "600px" }}
             />
           </div>
-          <div className="col-md mb-3">
+          <div className="col-md mb-2">
             <img
-              src={Scenes}
+              src={jutebag12}
               alt="Scenes"
-              className="img-fluid-rounded"
+              className="equal-img rounded"
               style={{ maxWidth: "300px" }}
             />
           </div>
         </div>
         <div>
-          <h2 className="text-center">The Origin of our Spices</h2>
+          <h2 className="text-center">The Origin of Our Jute Bag</h2>
           <p className="text-center">
-            Every spice in our collection tells a story. Our cinnamon is sourced
-            from the hills of Kerala, while our turmeric comes from the rich
-            soils of Erode, Tamil Nadu — known as the "Turmeric City of India".
-            Black pepper, cardamom, and other exotic spices are handpicked from
-            farms where traditional organic farming methods are still followed.
-            We believe in keeping the journey from farm to kitchen transparent
-            and natural.
+            Every jute bag in our collection carries the legacy of India’s
+            golden fiber. Our premium jute is grown in the fertile alluvial
+            plains of West Bengal and Assam, regions renowned for producing the
+            finest quality fibers. The raw jute is harvested, retted, and
+            sun-dried using age-old, eco-friendly methods that preserve its
+            natural strength and texture. Skilled artisans then hand-weave and
+            stitch each bag, blending traditional craftsmanship with modern
+            designs. We believe in keeping the journey from farm to fashion
+            sustainable, ethical, and transparent.
           </p>
         </div>
       </div>
