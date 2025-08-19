@@ -1,12 +1,7 @@
-import React from "react";
-import Spices from "../assets/Spices2.jpg";
 import Backjute from "../assets/Backjute.png";
 import jutebag12 from "../assets/Jute bag12.jpg";
 import HomeJute3 from "../assets/HomeJute3.jpeg";
 import HomeJute4 from "../assets/HomeJute4.jpeg";
-import Kerala from "../assets/Kerala.jpg";
-import Scenes from "../assets/Scenes.jpg";
-import Scene from "../assets/Scene4.jpeg";
 import "../App.css";
 import { useNavigate } from "react-router-dom";
 

@@ -1,5 +1,4 @@
 import Productcard from "../Components/Productcard";
-import Spices from "../Data/Spices";
 import Jutebag from "../Data/Jutebag";
 import { CartContext } from "../Context/CartContext";
 import { useContext } from "react";

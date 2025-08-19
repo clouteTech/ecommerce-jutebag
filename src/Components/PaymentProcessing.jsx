@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import Spices from "../Data/Spices";
 import "../App.css";
 
 const PaymentProcessing = () => {
@@ -21,14 +20,14 @@ const PaymentProcessing = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleClick = () => {
-    const orderedItemsWithGST = orderedItems.map((item) => {
-      const spice = Spices.find((s) => s.id === item.id);
-      return {
-        ...item,
-        gst: spice?.gst || 0,
-      };
-    });
+  // const handleClick = () => {
+  //   const orderedItemsWithGST = orderedItems.map((item) => {
+  //     const spice = Spices.find((s) => s.id === item.id);
+  //     return {
+  //       ...item,
+  //       gst: spice?.gst || 0,
+  //     };
+  //   });
 
     // navigate("/invoice", {
     //   state: {
@@ -38,7 +37,7 @@ const PaymentProcessing = () => {
     //     subtotal,
     //   },
     // });
-  };
+  // };
 
   return (
     <div className="container py-5 text-center">
