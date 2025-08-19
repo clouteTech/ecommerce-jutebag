@@ -31,11 +31,11 @@ const OrderSummary = () => {
       <h2>Order Summary</h2>
       <h4>1.Customer Login Info</h4>
       <p>
-        <strong>Name:</strong>
+        <strong>Name:XYZ</strong>
         {profile?.name}
       </p>
       <p>
-        <strong>Phone No:</strong>
+        <strong>Phone No:1234567891</strong>
         {profile?.phone}
       </p>
       <h4>2.Shipping Address</h4>
@@ -83,10 +83,10 @@ const OrderSummary = () => {
               <div className="row">
                 <span>Name:{item.name}</span>
                 <span>Qty:{item.quantity}</span>
-                <span>Size:{item.selectedSize}g</span>
+                <span>Size:{item.selectedSize}</span>
                 <span>
                   Price:₹
-                  {(item.price * item.quantity * item.selectedSize).toFixed(2)}
+                  {(item.price * item.quantity).toFixed(2)}
                 </span>
               </div>
             </li>

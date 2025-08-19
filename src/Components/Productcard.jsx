@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Spices from "../Data/Spices";
 import Jutebag from "../Data/Jutebag";
 
 const Productcard = ({ id, img, name, price, onAdd }) => {
@@ -10,7 +9,7 @@ const Productcard = ({ id, img, name, price, onAdd }) => {
 
   const handleAddtoCart = (e) => {
     e.stopPropagation();
-    onAdd({ ...spice, selectedSize, totalPrice });
+    onAdd({ ...spice, selectedSize, price});
     navigate("/cart");
   };
 

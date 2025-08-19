@@ -30,7 +30,7 @@ const Contact = () => {
 
   return (
     <div
-      className="container"
+      className="container mb-4"
     >
       <div
         className="form-group mb-2"

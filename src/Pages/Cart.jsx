@@ -19,7 +19,7 @@ const Cart = () => {
   const total = Number(
     cartItems
       .reduce(
-        (sum, item) => sum + item.price * item.quantity * item.selectedSize,
+        (sum, item) => sum + item.price * item.quantity ,
         0
       )
       .toFixed(2)
@@ -31,7 +31,7 @@ const Cart = () => {
         selectedItems.includes(`${item.id}-${item.selectedSize}`)
       )
       .reduce(
-        (sum, item) => sum + item.price * item.quantity * item.selectedSize,
+        (sum, item) => sum + item.price * item.quantity ,
         0
       )
       .toFixed(2)
@@ -130,10 +130,10 @@ const Cart = () => {
                   <div className="row">
                     <span>Name:{item.name}</span>
                     <span>Qty:{item.quantity}</span>
-                    <span>Size:{item.selectedSize}g</span>
+                    <span>Size:{item.selectedSize}</span>
                     <span>
                       Price:₹
-                      {(item.price * item.quantity * item.selectedSize).toFixed(
+                      {(item.price * item.quantity).toFixed(
                         2
                       )}
                     </span>
@@ -203,11 +203,10 @@ const Cart = () => {
                     )
                     .map((item) => (
                       <li key={`${item.id}-${item.selectedSize}`}>
-                        {item.name} - {item.selectedSize}g x {item.quantity} = ₹
+                        {item.name} - {item.selectedSize} x {item.quantity} = ₹
                         {(
                           item.price *
-                          item.quantity *
-                          item.selectedSize
+                          item.quantity
                         ).toFixed(2)}
                       </li>
                     ))}

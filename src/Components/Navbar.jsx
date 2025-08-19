@@ -1,4 +1,8 @@
 import { Link } from "react-router-dom";
+import logobg from "../assets/logo bg.png";
+import logo1 from "../assets/logo1.png";
+import logojute from "../assets/logojute.jpg";
+import logojute1 from "../assets/logojute1.png";
 import logo from "../assets/logo.png";
 import { useEffect, useState } from "react";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
@@ -30,14 +34,17 @@ const Navbar = () => {
       } px-4`}
     >
       <div className="container-fluid d-flex justify-content-between align-items-center">
-        <Link className="navbar-brand" to="/">
-          <img src={logo} className="logo" alt="" width={"130px"} />
+        <Link className="navbar-brand" to="/home">
+          <img src={logojute1} className="logo" alt="" width={"130px"} />
         </Link>
         <button
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -45,28 +52,28 @@ const Navbar = () => {
           className="collapse navbar-collapse ms-auto d-flex justify-content-end"
           id="navbarNav"
         >
-          <ul className="navbar-nav gap-3">
+          <ul className="navbar-nav ms-auto gap-3">
             <li className="nav-item">
-              <Link className="nav-link" to="/">
-                <HomeOutlinedIcon fontSize="medium" />
+              <Link className="nav-link" to="/home">
+                <HomeOutlinedIcon fontSize="small" />
                 Home
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/products">
-                <Inventory2OutlinedIcon fontSize="small" />
+                <Inventory2OutlinedIcon sx={{ fontSize: 16 }} />
                 Product
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/cart">
-                <ShoppingCartOutlinedIcon fontSize="small" />
+                <ShoppingCartOutlinedIcon sx={{ fontSize: 16 }} />
                 Cart
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/contact">
-                <PermContactCalendarOutlinedIcon fontSize="small" />
+                <PermContactCalendarOutlinedIcon sx={{ fontSize: 16 }} />
                 Contact
               </Link>
             </li>
@@ -101,20 +108,21 @@ const Navbar = () => {
             color="error"
             overlap="circular"
           >
-            <LocalMallOutlinedIcon sx={{color:"white"}} fontSize="large" />
+            <LocalMallOutlinedIcon
+              sx={{ color: darkMode ? "white" : "black" }}
+              fontSize="large"
+            />
           </Badge>
         </Link>
-        <div className="dropdown ms-3">
+        <div className="dropdown ms-3 position-relative">
           <button
-            className={`btn ${
-              darkMode ? "btn-outline-light" : "btn-outline-dark"
-            } dropdown-toggle`}
+            className="btn btn-outline-light dropdown-toggle"
             type="button"
             id="userMenuButton"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            <AccountCircleIcon />
+            <AccountCircleIcon sx={{ color: darkMode ? "white" : "black" }} />
           </button>
           <ul
             className={`dropdown-menu dropdown-menu-end ${

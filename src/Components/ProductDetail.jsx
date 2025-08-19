@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import Spices from "../Data/Spices";
 import { CartContext } from "../Context/CartContext";
 import { toast } from "react-toastify";
 import Jutebag from "../Data/Jutebag";
@@ -9,9 +8,10 @@ const ProductDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const { addToCart } = useContext(CartContext);
-  const [selectedSize, setSelectedSize] = useState(100);
 
   const product = Jutebag.find((item) => item.id === parseInt(id));
+
+  const [selectedSize, setSelectedSize] = useState(product.defaultVariant);
 
   const totalPrice = (product.price * selectedSize).toFixed(2);
 
@@ -25,7 +25,7 @@ const ProductDetail = () => {
       quantity: 1,
     };
     addToCart(productToAdd);
-    toast.success(`${product.name}-${selectedSize}g Added to cart`);
+    toast.success(`${product.name}-${selectedSize} Added to cart`);
   };
 
   return (
@@ -47,10 +47,10 @@ const ProductDetail = () => {
           </div>
           <div className="col-md-6">
             <h2>{product.name}</h2>
-            <h4 className="text-warning">₹{totalPrice}</h4>
+            <h4 className="text-warning">₹{product.price}</h4>
             <p>⭐ {product.rating} / 5</p>
             <p>{product.description}</p>
-            <label className="form-label">Quantity:</label>
+            <label className="form-label"><b>Size:</b></label>
             <div className="d-flex gap-2 mb-3">
               {product.variants.map((variant) => (
                 <button
@@ -62,7 +62,7 @@ const ProductDetail = () => {
                   }`}
                   onClick={() => setSelectedSize(variant.size)}
                 >
-                  {variant.size}g
+                  {variant.size}
                 </button>
               ))}
             </div>

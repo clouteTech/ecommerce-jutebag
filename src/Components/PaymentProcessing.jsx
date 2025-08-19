@@ -6,7 +6,7 @@ import "../App.css";
 
 const PaymentProcessing = () => {
   const location = useLocation();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const { profile, orderedItems, subtotal, shippingAddress, paymentMethod } =
     location.state || {};
 
@@ -16,29 +16,29 @@ const PaymentProcessing = () => {
     const timer = setTimeout(() => {
       setIsProcessing(false);
       toast.success("Payment Successful!");
-    }, 3000); 
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
 
-  const handleClick =()=> {
-    const orderedItemsWithGST =orderedItems.map(item=>{
-      const spice = Spices.find(s => s.id === item.id);
-      return{
-      ...item,
-      gst:spice?.gst || 0,
-    }})
-
-    navigate("/invoice", {
-      state: {
-        profile,
-        orderedItems:orderedItemsWithGST,
-        shippingAddress,
-        subtotal,
-      },
+  const handleClick = () => {
+    const orderedItemsWithGST = orderedItems.map((item) => {
+      const spice = Spices.find((s) => s.id === item.id);
+      return {
+        ...item,
+        gst: spice?.gst || 0,
+      };
     });
-  }
 
+    // navigate("/invoice", {
+    //   state: {
+    //     profile,
+    //     orderedItems:orderedItemsWithGST,
+    //     shippingAddress,
+    //     subtotal,
+    //   },
+    // });
+  };
 
   return (
     <div className="container py-5 text-center">
@@ -51,19 +51,14 @@ const PaymentProcessing = () => {
         </>
       ) : (
         <>
-          <h3 style={{ color: "#ffff00" }}>
-            Payment Completed! Invoice downloaded.
-          </h3>
-          <iframe
-            src="https://lottie.host/embed/1f79eb34-5931-4128-b91f-7e9991eeea98/QLmPNQwdjf.lottie"
-            width="200"
-            height="200"
-            style={{ border: "none" }}
-            title="Payment Animation"
-          ></iframe>
-          <button type="invoice" className="btn btn-primary" onClick={handleClick} >Invoice</button>
+          <h3 style={{ color: "#ffff00" }}>Under Construction!</h3>
+          <iframe src="https://lottie.host/embed/4a0e7a26-8fda-4c4b-903d-c4c793085b15/oIHTT7nzEu.lottie"
+            //src="https://lottie.host/embed/1f79eb34-5931-4128-b91f-7e9991eeea98/QLmPNQwdjf.lottie"
+            width="200" height="200" style={{ border: "none" }}
+            title="Payment Animation" >
+          </iframe>
+          {/* <button type="invoice" className="btn btn-primary" onClick={handleClick} >Invoice</button> */}
         </>
-        
       )}
 
       {/* Hidden invoice for PDF */}

@@ -8,8 +8,10 @@ import Kerala from "../assets/Kerala.jpg";
 import Scenes from "../assets/Scenes.jpg";
 import Scene from "../assets/Scene4.jpeg";
 import "../App.css";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div
@@ -35,7 +37,12 @@ const Home = () => {
         >
           <h1>Welcome to Earth's Choice</h1>
           <p>Eco-Friendly Bags for a Better Tomorrow</p>
-          <button className="btn btn-warning">Shop Now</button>
+          <button
+            className="btn btn-warning"
+            onClick={() => navigate("/products")}
+          >
+            Shop Now
+          </button>
         </div>
       </div>
       <div className="scroll-banner">
@@ -45,7 +52,7 @@ const Home = () => {
         </div>
       </div>
       <div className="container-sm">
-        <div className="d-flex align-items-center justify-content-center ">
+        <div className="d-flex align-items-center justify-content-center">
           <h2
             className="m-3 p-3 text-center rounded-pill border border-5 "
             style={{ width: "50vh" }}
@@ -88,20 +95,25 @@ const Home = () => {
             />
           </div>
         </div>
-        <div>
-          <h2 className="text-center">The Origin of Our Jute Bag</h2>
-          <p className="text-center">
-            Every jute bag in our collection carries the legacy of India’s
-            golden fiber. Our premium jute is grown in the fertile alluvial
-            plains of West Bengal and Assam, regions renowned for producing the
-            finest quality fibers. The raw jute is harvested, retted, and
-            sun-dried using age-old, eco-friendly methods that preserve its
-            natural strength and texture. Skilled artisans then hand-weave and
-            stitch each bag, blending traditional craftsmanship with modern
-            designs. We believe in keeping the journey from farm to fashion
-            sustainable, ethical, and transparent.
-          </p>
+        <div className="d-flex align-items-center justify-content-center">
+          <h2
+            className="m-3 p-3 text-center rounded-pill border border-5"
+            style={{ width: "70vh" }}
+          >
+            The Origin of Our Jute Bag
+          </h2>
         </div>
+        <p className="text-center">
+          Every jute bag in our collection carries the legacy of India’s golden
+          fiber. Our premium jute is grown in the fertile alluvial plains of
+          West Bengal and Assam, regions renowned for producing the finest
+          quality fibers. The raw jute is harvested, retted, and sun-dried using
+          age-old, eco-friendly methods that preserve its natural strength and
+          texture. Skilled artisans then hand-weave and stitch each bag,
+          blending traditional craftsmanship with modern designs. We believe in
+          keeping the journey from farm to fashion sustainable, ethical, and
+          transparent.
+        </p>
       </div>
     </>
   );
