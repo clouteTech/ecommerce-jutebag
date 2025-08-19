@@ -1,9 +1,5 @@
 import { Link } from "react-router-dom";
-import logobg from "../assets/logo bg.png";
-import logo1 from "../assets/logo1.png";
-import logojute from "../assets/logojute.jpg";
 import logojute1 from "../assets/logojute1.png";
-import logo from "../assets/logo.png";
 import { useEffect, useState } from "react";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
@@ -13,7 +9,6 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Inventory2OutlinedIcon from "@mui/icons-material/Inventory2Outlined";
 import PermContactCalendarOutlinedIcon from "@mui/icons-material/PermContactCalendarOutlined";
 import {Badge} from "@mui/material";
-import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import { useCart } from "../Context/CartContext";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 
