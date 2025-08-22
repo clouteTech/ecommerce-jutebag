@@ -11,7 +11,7 @@ import { ToastContainer, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Profile from "./Pages/Profile";
 import OrderSummary from "./Components/OrderSummary";
-import { Navigate } from "react-router-dom";
+// import { Navigate } from "react-router-dom";
 // import Invoice from "./Components/invoice";
 import PaymentProcessing from "./Components/PaymentProcessing";
 
@@ -29,7 +29,7 @@ const App = () => {
         <Route path="/payment" element={<PaymentProcessing />} />
         {/* <Route path="/invoice" element={<Invoice />} /> */}
         <Route path="/product/:id" element={<ProductDetail />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
       </Routes>
       <ToastContainer
         position="top-center"
