@@ -18,10 +18,7 @@ const Cart = () => {
   console.log("Cart items:", cartItems);
   const total = Number(
     cartItems
-      .reduce(
-        (sum, item) => sum + item.price * item.quantity ,
-        0
-      )
+      .reduce((sum, item) => sum + item.price * item.quantity, 0)
       .toFixed(2)
   );
 
@@ -30,10 +27,7 @@ const Cart = () => {
       .filter((item) =>
         selectedItems.includes(`${item.id}-${item.selectedSize}`)
       )
-      .reduce(
-        (sum, item) => sum + item.price * item.quantity ,
-        0
-      )
+      .reduce((sum, item) => sum + item.price * item.quantity, 0)
       .toFixed(2)
   );
 
@@ -110,9 +104,10 @@ const Cart = () => {
                 >
                   <input
                     type="checkbox"
-                    className="form-check-input me-3"
+                    className="form-check-input me-3 border-black"
                     checked={selectedItems.includes(itemKey)}
                     onChange={() => handleSelect(itemKey)}
+                    style={{ borderWidth: "2px" }}
                   />
                   <div className="mb-3">
                     <img
@@ -124,6 +119,7 @@ const Cart = () => {
                         objectFit: "cover",
                         marginRight: "10px",
                         borderRadius: "5px",
+                        borderWidth: "3px",
                       }}
                     />
                   </div>
@@ -133,9 +129,7 @@ const Cart = () => {
                     <span>Size:{item.selectedSize}</span>
                     <span>
                       Price:₹
-                      {(item.price * item.quantity).toFixed(
-                        2
-                      )}
+                      {(item.price * item.quantity).toFixed(2)}
                     </span>
                   </div>
                   <div className="d-flex align-items-center ms-auto gap-3">
@@ -204,10 +198,7 @@ const Cart = () => {
                     .map((item) => (
                       <li key={`${item.id}-${item.selectedSize}`}>
                         {item.name} - {item.selectedSize} x {item.quantity} = ₹
-                        {(
-                          item.price *
-                          item.quantity
-                        ).toFixed(2)}
+                        {(item.price * item.quantity).toFixed(2)}
                       </li>
                     ))}
                 </ul>

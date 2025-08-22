@@ -8,7 +8,7 @@ import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Inventory2OutlinedIcon from "@mui/icons-material/Inventory2Outlined";
 import PermContactCalendarOutlinedIcon from "@mui/icons-material/PermContactCalendarOutlined";
-import {Badge} from "@mui/material";
+import { Badge } from "@mui/material";
 import { useCart } from "../Context/CartContext";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 
@@ -37,9 +37,9 @@ const Navbar = () => {
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          // aria-controls="navbarNav"
+          // aria-expanded="false"
+          // aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -49,7 +49,7 @@ const Navbar = () => {
         >
           <ul className="navbar-nav ms-auto gap-3">
             <li className="nav-item">
-              <Link className="nav-link" to="/home">
+              <Link className="nav-link" to="/">
                 <HomeOutlinedIcon fontSize="small" />
                 Home
               </Link>
@@ -121,7 +121,7 @@ const Navbar = () => {
           </button>
           <ul
             className={`dropdown-menu dropdown-menu-end ${
-              darkMode ? "bg-dark border border-light" : ""
+              darkMode ? "" : "bg-dark border border-light"
             }`}
             aria-labelledby="userMenuButton"
           >
