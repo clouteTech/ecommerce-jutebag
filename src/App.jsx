@@ -24,13 +24,11 @@ const App = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/profile" element={<Profile />} />
-        <Route
-          path="/order-summary"
-          element={<OrderSummary />}
-        />
+        <Route path="/order-summary" element={<OrderSummary />} />
         <Route path="/payment" element={<PaymentProcessing />} />
         {/* <Route path="/invoice" element={<Invoice />} /> */}
         <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <ToastContainer
         position="top-center"

@@ -32,11 +32,9 @@ const OrderSummary = () => {
       <h4>1.Customer Login Info</h4>
       <p>
         <strong>Name:XYZ</strong>
-        {profile?.name}
       </p>
       <p>
         <strong>Phone No:1234567891</strong>
-        {profile?.phone}
       </p>
       <h4>2.Shipping Address</h4>
       <textarea
