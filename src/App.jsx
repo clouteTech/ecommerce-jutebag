@@ -11,6 +11,7 @@ import { ToastContainer, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Profile from "./Pages/Profile";
 import OrderSummary from "./Components/OrderSummary";
+import { Navigate } from "react-router-dom";
 // import Invoice from "./Components/invoice";
 import PaymentProcessing from "./Components/PaymentProcessing";
 
@@ -19,7 +20,7 @@ const App = () => {
     <>
       <Navbar />
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/products" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/contact" element={<Contact />} />

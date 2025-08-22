@@ -29,7 +29,7 @@ const Navbar = () => {
       } px-4`}
     >
       <div className="container-fluid d-flex justify-content-between align-items-center">
-        <Link className="navbar-brand" to="/home">
+        <Link className="navbar-brand" to="/">
           <img src={logojute1} className="logo" alt="" width={"130px"} />
         </Link>
         <button

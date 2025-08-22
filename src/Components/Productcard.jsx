@@ -35,7 +35,7 @@ const Productcard = ({ id, img, name, price, onAdd }) => {
           ₹{price}
           <span className="small text-muted"></span>
         </p>
-        <button onClick={onAdd} className="btn btn-warning ms-auto">
+        <button onClick={handleViewDetails} className="btn btn-warning ms-auto">
           Add to Cart
         </button>
       </div>
